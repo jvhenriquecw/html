@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <style>
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <fieldset>
+            <legend>Seus Dados</legend>
+            <p>
+                <label for="nome">Seu Nome:</label>
+                <input type="text" name="nome" id="username" placeholder="Jv" required>
+            </p>
+
+            <p>
+                <label for="number">Idade:</label>
+                <input type="number" id="number" name="number" min="18" max="100" </p>
+
+            <p>
+                <label for="dev">Sou dev</label>
+                <input type="checkbox" name="sou_dev" id="dev" checked>
+            </p>
+
+            <p>
+                Gênero:<br>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="genero" id="masculino" placeholder="Jv" value="masc">
+
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="genero" id="feminino" placeholder="Jv" value="fem">
+
+                <label for="outro">Outro</label>
+                <input type="radio" name="genero" id="outro" placeholder="Jv" value="outro">
+
+            </p>
+
+            <p>
+                <label for="date">Data</label>
+                <input type="date" id="date" name="date" value="2009-04-01">
+            </p>
+
+            <p><label for="datetime">Data e Hora</label><br>
+                <input type="datetime-local" id="datetime" name="datetime" value="2009-04-01T10:30">
+            </p>
+
+            <p>
+                <label for="time">Hora</label><br>
+                <input type="time" id="time" name="time" value="16:30:04">
+            </p>
+
+            <p>
+                <label for="cor">Cor Preferida</label><br>
+                <input type="color" id="cor" name="cor" value="#FF0000">
+            </p>
+
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="Ex: jv@email.com" required">
+            </p>
+
+            <p>
+                <label for="password">Senha: </label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha">
+            </p>
+
+            <p>
+                <label for="file">Escolha um arquivo</label><br>
+                <input type="file" id="file" name="file" accept=".png" multiple>
+            </p>
+
+            <p>
+                <label for="range">Range</label>
+                <input type="range" id="range" name="range" list="tickmarks">
+
+                <datalist id="tickmarks">
+                    <option value="0" label="0%">
+                    <option value="10">
+                    <option value="20">
+                    <option value="30">
+                    <option value="40">
+                    <option value="50" label="50%">
+                    <option value="60">
+                    <option value="70">
+                    <option value="80">
+                    <option value="90">
+                    <option value="100" label="100%">
+                </datalist>
+            </p>
+
+            <p>
+                <label for="url">Sua url: </label>
+                <input type="url" id="url" name="url">
+            </p>
+
+            <p>
+                <label for="search">Sua Pesquisa: </label>
+                <input type="search" id="search" name="search">
+            </p>
+
+            <p>
+                <label for="nation">País de Nascimento: </label>
+
+                <select name="nation" id="nation">
+                    <optgroup label="Europa">
+                        <option value="alemanha" label="Alemanha">
+                        <option value="italia" label="Italia">
+                        <option value="franca" label="França">
+                        <option value="espanha" label="Espanha" disabled>
+                    </optgroup>
+
+                    <optgroup label="América">
+                        <option value="brasil" label="Brasil" selected>
+                        <option value="argentina" label="Argentina" disabled>
+                        <option value="equador" label="Equador">
+                        <option value="colombia" label="Colombia">
+                    </optgroup>
+
+                </select>
+            </p>
+
+            <p>
+                <label for="textarea">Obs: </label><br>
+                <textarea name="textarea" id="textarea" rows="4" cols="10">Observação: </textarea>
+            </p>
+
+            <p>
+                <button type="reset">Reset</button>
+                <button type="submit">Enviar</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
