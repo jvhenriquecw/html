@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+
+.sim h1+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.div p+h1 {
+    color: darkblue;
+}
+
+section p~h1 {
+    color: darkgreen;
+}
