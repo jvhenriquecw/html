@@ -1,51 +1,52 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.pai {
-    height: 300vh;
+.grid {
+    padding: 15px;
 }
 
-.filha1, .filha2, .filha3 {
-    width: 500px;
-    height: 500px;
-    margin: 0px;
-    position: static;
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
-.filha1 {
-    background-color: rgba(0, 0, 0, 0.676);
-    position: absolute;
-    top: 50%;
-    margin-top:-250px;
-    left: 50%;
-    margin-left: -250px;
-    z-index: 3;
+.grid .col {
+    width: 33.33%;
+    height: 300px;
+    float: left;
+    padding: 15px;
 }
 
-.filha2 {
-    left: 55%;
-    background-color: brown;
-    position: absolute;
-    z-index: 1;
+.grid .col_content {
+    width: 100%;
+    height: 100%;
+    background-color: red;
 }
 
-.filha3 {
-    background-color: rgb(238, 130, 238);
-    position: fixed;
-    top: 50%;
-    right: 50%;
-    z-index: 2;
-    
+@media (max-width: 550px) {
+    .grid .col {
+        width: 100%;
+    }
 }
 
-ul {
-    height: 100px;
-    overflow-y: auto;
+@media (min-width: 551px) and (max-width: 768px) {
+    .grid .col {
+        width: 50%;
+    }
 }
 
-ul li.sticky {
-    background-color: gray;;
-    position: sticky;
-    top: 20%;
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid .col {
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .grid .col {
+        width: 25%;
+    }
 }
